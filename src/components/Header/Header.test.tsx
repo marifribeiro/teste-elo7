@@ -2,14 +2,12 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 
-import { Main } from ".";
+import { Header } from "./Header";
 
-describe("<Main />", () => {
-  it("should hender Main Component", () => {
-    render(<Main />);
+describe("<Header />", () => {
+  it("should hender a header tag", () => {
+    render(<Header />);
 
-    expect(
-      screen.getByRole("heading", { name: /Trabalhe no Elo7/i })
-    ).toBeInTheDocument();
+    expect(screen.getByRole("heading")).toBeInTheDocument();
   });
 });
