@@ -10,4 +10,21 @@ describe("<Header />", () => {
 
     expect(screen.getByRole("heading")).toBeInTheDocument();
   });
+
+  it("should render 'Trabalhe no Elo7' text", () => {
+    render(<Header />);
+
+    expect(screen.getByText("Trabalhe no Elo7")).toBeInTheDocument();
+  });
+
+  it("displays the correct image", () => {
+    render(<Header />);
+    const displayedImage = document.querySelector("img") as HTMLImageElement;
+    expect(displayedImage.src).toContain("foto-header");
+  });
+
+  it("contains hiperlink to open jobs positions", () => {
+    render(<Header />);
+    expect(screen.getByText(/vagas em aberto/i)).toHaveAttribute("href", "#");
+  });
 });
