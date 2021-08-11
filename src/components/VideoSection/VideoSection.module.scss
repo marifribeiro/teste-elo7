@@ -1,0 +1,23 @@
+.videoSection {
+  background-color: #f4f5f7;
+  width: 100%;
+  margin-top: 50px;
+  padding: 50px;
+  display: grid;
+  grid-template-areas: "video section";
+}
+
+.videoSection img {
+  grid-area: video;
+}
+
+.videoSection section {
+  margin-left: 50px;
+  grid-area: section;
+}
+
+.videoSection p {
+  margin-top: 30px;
+  line-height: 24px;
+  text-align: left;
+}
