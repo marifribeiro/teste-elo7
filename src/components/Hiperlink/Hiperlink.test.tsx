@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 
 import { Hiperlink } from "./Hiperlink";
@@ -9,5 +9,11 @@ describe("<Hiperlink />", () => {
     render(<Hiperlink label="Click me" url="#" />);
 
     expect(screen.getByRole("link")).toBeInTheDocument();
+  });
+
+  it("should redirect to url param", async () => {
+    render(<Hiperlink label="Click me" url="elo7/jobs" />);
+
+    expect(screen.getByRole("link")).toHaveAttribute("href", "elo7/jobs");
   });
 });
