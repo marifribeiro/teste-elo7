@@ -1,11 +1,26 @@
 .teamSection {
+  background-color: #f4f5f7;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.teamSection h2 {
+  text-align: center;
+  width: 250px;
+  line-height: 25px;
+}
+
+.teamPhotos {
   display: flex;
   flex-direction: row;
   width: auto;
   align-items: center;
   justify-content: center;
+  margin-top: 40px;
 }
 
-.teamSection img {
+.teamPhotos img {
   margin: 0 5px;
 }
