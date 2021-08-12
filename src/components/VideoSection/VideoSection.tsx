@@ -1,6 +1,6 @@
 import React from "react";
 
-import videoPlaceholder from "./placeholder-video.png";
+import videoPlaceholder from "assets/placeholder-video.png";
 import styles from "./VideoSection.module.scss";
 
 export const VideoSection = () => {

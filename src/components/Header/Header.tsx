@@ -2,7 +2,7 @@ import React from "react";
 
 import { Hiperlink } from "components/Hiperlink";
 
-import fotoHeader from "./foto-header.png";
+import fotoHeader from "assets/foto-header.png";
 import styles from "./Header.module.scss";
 
 export const Header = () => (

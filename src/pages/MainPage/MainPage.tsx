@@ -5,10 +5,10 @@ import { Header } from "components/Header";
 import { VideoSection } from "components/VideoSection";
 import { TeamSection } from "components/TeamSection/TeamSection";
 import { Photo } from "components/TeamSection";
-import camila from "./camila.png";
-import david from "./david.png";
-import guto from "./guto.png";
-import beatriz from "./beatriz.png";
+import camila from "assets/camila.png";
+import david from "assets/david.png";
+import guto from "assets/guto.png";
+import beatriz from "assets/beatriz.png";
 
 const teamPhotos: Photo[] = [
   {
