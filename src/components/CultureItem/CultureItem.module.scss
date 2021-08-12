@@ -1,0 +1,24 @@
+.cultureItem {
+  display: grid;
+  grid-template-rows: 150px auto auto;
+  grid-template-columns: minmax(150px, 1fr);
+  row-gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.cultureItem h2 {
+  text-align: center;
+}
+
+.cultureItem p {
+  align-self: flex-start;
+}
+
+.cultureItem img {
+  justify-self: center;
+  max-width: 150px;
+  max-height: 150px;
+  width: auto;
+  height: auto;
+}
