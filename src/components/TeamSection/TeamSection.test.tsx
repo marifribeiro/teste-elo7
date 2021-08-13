@@ -3,11 +3,8 @@ import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 
 import camila from "assets/camila.png";
-import david from "assets/david.png";
-import guto from "assets/guto.png";
-import beatriz from "assets/beatriz.png";
 
-import { TeamSectionProps, Photo } from "./TeamSection.types";
+import { Photo } from "./TeamSection.types";
 import { TeamSection } from "./TeamSection";
 
 const teamPhotos: Photo[] = [
