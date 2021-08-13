@@ -1,3 +1,9 @@
+- falar sobre testes
+
+falar pq coloquei as imgs nas pastas dos componentes (doc react) https://create-react-app.dev/docs/using-the-public-folder/#when-to-use-the-public-folder
+
+Falar pq o team section recebe props
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
