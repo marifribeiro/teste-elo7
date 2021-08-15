@@ -1,5 +1,5 @@
 .hiperlink {
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -7,7 +7,7 @@
   align-items: center;
 }
 
-.hiperlink span {
+.hiperlink .separator {
   width: 250px;
   height: 1px;
   background-color: #7d7873;
@@ -18,5 +18,4 @@
   text-decoration: none;
   color: #359c9c;
   font-weight: 500;
-  text-transform: uppercase;
 }

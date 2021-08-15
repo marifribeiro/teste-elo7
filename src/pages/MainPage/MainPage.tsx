@@ -6,6 +6,9 @@ import { VideoSection } from "components/VideoSection";
 import { TeamSection } from "components/TeamSection/TeamSection";
 import { Photo } from "components/TeamSection";
 import { CultureList } from "components/CultureList";
+import { CultureItemProps } from "components/CultureItem";
+import { OpenJobsSection } from "components/OpenJobsSection";
+
 import camila from "assets/camila.png";
 import david from "assets/david.png";
 import guto from "assets/guto.png";
@@ -13,7 +16,6 @@ import beatriz from "assets/beatriz.png";
 import qualidade from "assets/qualidade.png";
 import descontracao from "assets/descontracao.png";
 import atividades from "assets/atividades.png";
-import { CultureItemProps } from "components/CultureItem";
 
 const teamPhotos: Photo[] = [
   {
@@ -66,6 +68,7 @@ export const MainPage = () => {
       <VideoSection />
       <TeamSection photos={teamPhotos} />
       <CultureList cultureItems={culture} />
+      <OpenJobsSection />
     </Container>
   );
 };

@@ -20,7 +20,7 @@ export const CultureList = ({ cultureItems }: CultureListProps) => {
           />
         ))}
       </section>
-      <Hiperlink label="saiba mais" url="#" />
+      <Hiperlink label="SAIBA MAIS" url="#" separator arrow />
     </>
   );
 };
