@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import { Container } from "components/Container";
 import { Header } from "components/Header";
@@ -8,6 +8,8 @@ import { Photo } from "components/TeamSection";
 import { CultureList } from "components/CultureList";
 import { CultureItemProps } from "components/CultureItem";
 import { OpenJobsSection } from "components/OpenJobsSection";
+import { jobOpeningsAdapter } from "adapters/jobOpeningsAdapter";
+import { getJobOpenings } from "services/jobOpeningsService";
 
 import camila from "assets/camila.png";
 import david from "assets/david.png";
@@ -16,6 +18,7 @@ import beatriz from "assets/beatriz.png";
 import qualidade from "assets/qualidade.png";
 import descontracao from "assets/descontracao.png";
 import atividades from "assets/atividades.png";
+import { JobOpeningTreated } from "types/JobOpenings.types";
 
 const teamPhotos: Photo[] = [
   {
@@ -62,13 +65,22 @@ const culture: CultureItemProps[] = [
 ];
 
 export const MainPage = () => {
+  const [jobOpenings, setJobOpenings] = useState<JobOpeningTreated[]>([]);
+
+  useEffect(() => {
+    getJobOpenings().then(
+      (res) => setJobOpenings(jobOpeningsAdapter(res.data)),
+      (err) => console.log(err)
+    );
+  }, []);
+
   return (
     <Container>
       <Header />
       <VideoSection />
       <TeamSection photos={teamPhotos} />
       <CultureList cultureItems={culture} />
-      <OpenJobsSection />
+      <OpenJobsSection jobOpenings={jobOpenings} />
     </Container>
   );
 };

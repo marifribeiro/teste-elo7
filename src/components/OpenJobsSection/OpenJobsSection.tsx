@@ -1,23 +1,12 @@
-import React, { useState, useEffect } from "react";
-
-import { getJobOpenings } from "services/jobOpeningsService";
-import { jobOpeningsAdapter } from "adapters/jobOpeningsAdapter";
+import React from "react";
 import { JobOpeningTreated } from "types/JobOpenings.types";
+import { OpenJobsSectionProps } from "./OpenJobsSection.types";
 import { Hiperlink } from "components/Hiperlink";
 import event from "assets/foto-bottom.png";
 
 import styles from "./OpenJobsSection.module.scss";
 
-export const OpenJobsSection = () => {
-  const [jobOpenings, setJobOpenings] = useState<JobOpeningTreated[]>([]);
-
-  useEffect(() => {
-    getJobOpenings().then(
-      (res) => setJobOpenings(jobOpeningsAdapter(res.data)),
-      (err) => console.log(err)
-    );
-  }, []);
-
+export const OpenJobsSection = ({ jobOpenings }: OpenJobsSectionProps) => {
   const checkForRemoteJob = (job: JobOpeningTreated): JSX.Element | null => {
     if (job.localizacao) {
       return (
@@ -45,7 +34,7 @@ export const OpenJobsSection = () => {
       {jobOpenings.map((vaga: JobOpeningTreated, index: number) => (
         <div key={index} className={styles.jobItem}>
           <Hiperlink url={vaga.link} label={vaga.cargo} />
-          <h5>{checkForRemoteJob(vaga)}</h5>
+          <h5 data-testid="location">{checkForRemoteJob(vaga)}</h5>
         </div>
       ))}
     </div>
