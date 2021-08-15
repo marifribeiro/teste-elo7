@@ -1,0 +1,26 @@
+.openJobsSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 40px;
+}
+
+.openJobsSection img {
+  margin-bottom: 40px;
+}
+
+.openJobsSection h2 {
+  margin-bottom: 40px;
+}
+
+.openJobsSection .jobItem {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.openJobsSection a {
+  text-align: left;
+}
