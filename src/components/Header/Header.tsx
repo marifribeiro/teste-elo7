@@ -12,7 +12,9 @@ export const Header = () => (
         src={fotoHeader}
         alt="Foto dos funcionários do elo7 sorrindo com as mãos para o alto"
       />
-      <h1>Trabalhe no Elo7</h1>
+      <div className={styles.textPosition}>
+        <h1>Trabalhe no Elo7</h1>
+      </div>
     </div>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
