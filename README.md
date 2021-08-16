@@ -13,6 +13,10 @@ Combinando as três ferramentas, é possível ter um código padronizado e com f
 
 Os componentes do projeto possuem testes unitários utilizado [Jest](https://jestjs.io/pt-br/) e [RTL](https://testing-library.com/). As ferramentas foram escolhidas por familiaridade da autora e por já virem instaladas no projeto gerado automaticamente com o [create-react-app](https://github.com/facebook/create-react-app), também por suporte da comunidade.
 
+Devido à estrutura do projeto, que é composto de somente uma página com pouca interação entre os componentes, a estratégia de testes foi separar a página única em várias sessões menores testáveis, sendo cada sessão um componente, e testá-los individualmente (e os testes de cada componente estão em suas respectivas pastas), assim não havendo necessidade de testar a tela toda.
+
+Desta forma, os componentes possuem testes, mas a página não.
+
 A estilização dos componentes é feita com [sass](https://sass-lang.com/). A preferência da autora para estilização é styles-components, mas acredito que utilizando sass posso me aproximar melhor da forma como o Elo7 trabalha, e também possuo familiaridade com essa ferramenta de estilização.
 
 ## Rodando o projeto localmente
