@@ -20,6 +20,6 @@ export const Header = () => (
       dictum urna turpis at mi. Proin imperdiet ipsum lorem, ut sollicitudin
       risus interdum quis.
     </p>
-    <Hiperlink label="VAGAS EM ABERTO" url="#" separator arrow />
+    <Hiperlink label="VAGAS EM ABERTO" url="#vagas" separator arrow />
   </header>
 );

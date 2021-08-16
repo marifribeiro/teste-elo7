@@ -25,7 +25,7 @@ export const OpenJobsSection = ({ jobOpenings }: OpenJobsSectionProps) => {
   };
 
   return (
-    <div className={styles.openJobsSection}>
+    <div className={styles.openJobsSection} id="vagas">
       <img
         src={event}
         alt="Foto tirada do alto de um evento de venda de artesanatos promovido pelo elo7."
