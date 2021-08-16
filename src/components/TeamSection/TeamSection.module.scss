@@ -24,3 +24,14 @@
 .teamPhotos img {
   margin: 0 5px;
 }
+
+@media (max-width: 780px) {
+  .teamPhotos {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .teamPhotos img {
+    margin: 10px 0;
+  }
+}
