@@ -25,6 +25,9 @@ describe("<Header />", () => {
 
   it("contains hiperlink to open jobs positions", () => {
     render(<Header />);
-    expect(screen.getByText(/vagas em aberto/i)).toHaveAttribute("href", "#");
+    expect(screen.getByText(/vagas em aberto/i)).toHaveAttribute(
+      "href",
+      "#vagas"
+    );
   });
 });
