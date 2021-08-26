@@ -1,6 +1,7 @@
 .screen {
   max-width: 960px;
   margin: 0 auto;
+  overflow-y: hidden;
 }
 
 @media (max-width: 960px) {
