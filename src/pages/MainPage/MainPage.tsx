@@ -19,6 +19,9 @@ import qualidade from "assets/qualidade.png";
 import descontracao from "assets/descontracao.png";
 import atividades from "assets/atividades.png";
 import { JobOpeningTreated } from "types/JobOpenings.types";
+import { OpenJobsList } from "components/OpenJobsList";
+
+import styles from "./MainPage.module.scss";
 
 const teamPhotos: Photo[] = [
   {
@@ -65,14 +68,25 @@ const culture: CultureItemProps[] = [
 ];
 
 export const MainPage = () => {
-  const [jobOpenings, setJobOpenings] = useState<JobOpeningTreated[]>([]);
+  const [jobOpenings, setJobOpenings] = useState<JobOpeningTreated[]>();
+  const [error, setError] = useState<boolean>(false);
 
   useEffect(() => {
     getJobOpenings().then(
       (res) => setJobOpenings(jobOpeningsAdapter(res.data)),
-      (err) => console.log(err)
+      () => setError(true)
     );
   }, []);
+
+  const loadJobsList = (): JSX.Element => {
+    if (jobOpenings) {
+      return <OpenJobsList jobOpenings={jobOpenings} />;
+    } else if (error) {
+      return <h3>Erro ao carregar</h3>;
+    } else {
+      return <h3>Carregando...</h3>;
+    }
+  };
 
   return (
     <Container>
@@ -80,7 +94,8 @@ export const MainPage = () => {
       <VideoSection />
       <TeamSection photos={teamPhotos} />
       <CultureList cultureItems={culture} />
-      <OpenJobsSection jobOpenings={jobOpenings} />
+      <OpenJobsSection />
+      {loadJobsList()}
     </Container>
   );
 };

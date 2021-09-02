@@ -9,3 +9,5 @@ const api = axios.create({
 export const getJobOpenings = () => {
   return api.get("/v2/5d6fb6b1310000f89166087b");
 };
+
+// "/v2/5d6fb6b1310000f89166087b"

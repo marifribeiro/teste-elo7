@@ -1,5 +1,4 @@
 .hiperlink {
-  font-size: 18px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -18,4 +17,8 @@
   text-decoration: none;
   color: #359c9c;
   font-weight: 500;
+}
+
+.hiperlink a::after {
+  content: " »";
 }
